@@ -1,4 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Next.js 정적 랜딩 페이지 (구글 시트 연동, Cloudflare/가비아 배포 가능)
+
+## GitHub 새 레포에 올리기
+
+1. **GitHub에서 새 저장소 생성**  
+   - [github.com/new](https://github.com/new) 접속  
+   - Repository name 입력 (예: `ui-landing`)  
+   - Public 선택, **README / .gitignore / license 추가하지 않음** (로컬에 이미 있음)  
+   - **Create repository** 클릭  
+
+2. **로컬에서 원격 추가 후 푸시** (아래 `YOUR_USERNAME`, `REPO_NAME`을 본인 값으로 변경):
+
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+   SSH를 쓰는 경우:
+   ```bash
+   git remote add origin git@github.com:YOUR_USERNAME/REPO_NAME.git
+   git push -u origin main
+   ```
+
+배포 방법은 [DEPLOYMENT.md](./DEPLOYMENT.md) 참고.
+
+---
 
 ## Getting Started
 

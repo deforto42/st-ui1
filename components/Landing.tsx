@@ -10,7 +10,7 @@ import ConsentSection, { ConsentKey } from "./ConsentSection";
 type Carrier = "KT" | "LGU" | "SKT" | "기타";
 
 export default function Landing() {
-  // 원본에 이미지 6장 링크가 노출되지만, 일부 환경에서 502가 나는 경우가 있어 fallback 처리 (원본 URL 형태 기반)  [oai_citation:2‡인터넷 티비 최대 140만원](https://175747947074214.dbcart.net/)
+  // 원본에 이미지 6장 링크가 노출되지만, 일부 환경에서 502가 나는 경우가 있어 fallback 처리 (원본 URL 형태 기반)  [oai_citation:2‡인터넷 최대 140만원](https://175747947074214.dbcart.net/)
   const images = useMemo(
     () => [
       "https://img6.dbcart.net/fileupload_folder/landing_top_74214_1765432452_0_24695816.png",
@@ -23,7 +23,7 @@ export default function Landing() {
     []
   );
 
-  // 원본 예시 데이터(화면에 보이는 형태 그대로)  [oai_citation:3‡인터넷 티비 최대 140만원](https://175747947074214.dbcart.net/)
+  // 원본 예시 데이터(화면에 보이는 형태 그대로)  [oai_citation:3‡인터넷 최대 140만원](https://175747947074214.dbcart.net/)
   const rows: StatusRow[] = useMemo(
     () => [
       { date: "2025-11-29", name: "남*준", phone: "010-4***-****", carrier: "기타" },
@@ -318,7 +318,7 @@ export default function Landing() {
               label="이용약관 동의"
               checked={consents.terms}
               onChange={(v: boolean) => toggleOne("terms", v)}
-              // 원본 페이지에 노출된 약관 텍스트를 그대로 넣어둠(표시용)  [oai_citation:5‡인터넷 티비 최대 140만원](https://175747947074214.dbcart.net/)
+              // 원본 페이지에 노출된 약관 텍스트를 그대로 넣어둠(표시용)  [oai_citation:5‡인터넷 최대 140만원](https://175747947074214.dbcart.net/)
               content={`제 1 장 총칙
 제 1 조 (목적) 이 약관은 이페이지의 이용에 관한 조건 및 절차와 기타 필요한 사항을 규정 하는 것을 목적으로 합니다.
 제 2 조 (용어의 정의) 이 약관에서 사용하는 용어의 정의는 다음과 같습니다.
@@ -383,7 +383,7 @@ export default function Landing() {
         </div>
       </div>
 
-      {/* Footer business info (원본 표기)  [oai_citation:6‡인터넷 티비 최대 140만원](https://175747947074214.dbcart.net/) */}
+      {/* Footer business info (원본 표기)  [oai_citation:6‡인터넷 최대 140만원](https://175747947074214.dbcart.net/) */}
       <div className="mt-8 border-t border-neutral-200 pt-5 text-xs sm:text-sm leading-6 text-neutral-700">
         <div>사업자 번호:586-20-02456</div>
         <div>상호명:유아이</div>

@@ -14,7 +14,7 @@ export default function ImageStrip(props: { urls: string[] }) {
             {!isFailed ? (
               <img
                 src={url}
-                alt="인터넷 티비 최대 140만원"
+                alt="인터넷 최대 140만원"
                 loading={idx === 0 ? "eager" : "lazy"}
                 decoding="async"
                 referrerPolicy="no-referrer"

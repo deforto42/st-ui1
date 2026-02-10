@@ -59,7 +59,18 @@
 4. **Environment variables**에 `NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK_URL` 추가 (구글 시트 사용 시).
 5. 저장 후 자동으로 빌드·배포됩니다. 이후 `main`(또는 선택한 브랜치)에 푸시할 때마다 자동 재배포됩니다.
 
-### 2-4. 커스텀 도메인 (가비아 도메인 연결)
+### 2-4. Cloudflare Workers + Wrangler (Git 빌드 후 wrangler deploy)
+
+Git 저장소와 연결한 **Workers** 프로젝트에서 빌드 후 `npx wrangler deploy`로 배포하는 경우:
+
+- 프로젝트 루트에 **`wrangler.jsonc`** 가 있어야 합니다. 이 프로젝트에는 이미 포함되어 있으며, Next.js 정적 빌드 결과물(`out`)을 에셋으로 올리도록 설정되어 있습니다.
+- Cloudflare 빌드 설정 예:
+  - **Build command**: `npm run build`
+  - **Deploy command**: `npx wrangler deploy`
+  - **Root directory**: `/`
+- `npm run build`로 `out`이 생성된 뒤 `wrangler deploy`가 `out` 폴더를 정적 사이트로 배포합니다.
+
+### 2-5. 커스텀 도메인 (가비아 도메인 연결)
 
 - Cloudflare Pages 프로젝트 → **Custom domains** → **Set up a custom domain**.
 - 가비아에서 구매한 도메인 입력 후, 안내에 따라 **네임서버를 Cloudflare로 변경**하거나 **A/CNAME 레코드**를 Cloudflare가 안내한 값으로 설정합니다.  

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { GOOGLE_SHEET_WEBHOOK_URL } from "@/config";
 import Countdown from "./Countdown";
 import ImageStrip from "./ImageStrip";
 import StatusTable, { StatusRow } from "./StatusTable";
@@ -97,11 +98,8 @@ export default function Landing() {
     try {
       setSubmitting(true);
       
-      // 정적 내보내기 모드에서는 API 라우트가 작동하지 않으므로 직접 webhook 호출
-      const webhookUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK_URL;
-      if (!webhookUrl) {
-        throw new Error("Webhook URL이 설정되지 않았습니다.");
-      }
+      // 정적 내보내기 모드에서는 API 라우트가 작동하지 않으므로 직접 webhook 호출 (URL은 config.ts에 고정)
+      const webhookUrl = GOOGLE_SHEET_WEBHOOK_URL;
       
       // Google Apps Script CORS 우회: 숨겨진 iframe을 사용하여 form 제출
       return new Promise<void>((resolve, reject) => {

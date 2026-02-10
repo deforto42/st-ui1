@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>세정아 사랑해</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to top right, #ffd6e8, #fff0f5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Nanum Brush Script', cursive;
+    }
+
+    .message {
+      font-size: 3rem;
+      color: #d63384;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      animation: fadeIn 2s ease-in-out, float 3s infinite ease-in-out;
+      text-align: center;
+      white-space: pre-line;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    세정아 💗<br>
+    사랑해
+  </div>
+</body>
+</html>
